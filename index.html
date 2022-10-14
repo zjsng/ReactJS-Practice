@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- The position of the script affects when it is executed -->
+    <!-- <script src="./js/script.js"></script> -->
+    <!-- <script>
+        alert("Hello");
+    </script> -->
+</head>
+
+<body>
+    <h1>Welcome!</h1>
+    <!-- <script>
+        alert("Hi!");
+    </script> -->
+    <!-- <script>
+        // DOM Method
+        document.getElementById('display').innerHTML = "This is to define the element content";
+    </script> -->
+    <form name="myForm" onsubmit="return validateForm(this)">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required><br>
+        <label for="contact">Contact:</label>
+        <input type="text" id="contact" name="contact" required><br>
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required><br>
+        <label for="designation">Designation:</label>
+        <input type="text" id="designation" name="designation" required><br>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br>
+        <!-- <input type="radio" id="add" name="arithmetic" value="Add"><label for="add">Add</label><br>
+        <input type="radio" id="subtract" name="arithmetic" value="Subtract"><label for="subtract">Subtract</label><br>
+        <input type="radio" id="multiply" name="arithmetic" value="Multiply"><label for="multiply">Multiply</label><br>
+        <input type="radio" id="divide" name="arithmetic" value="Divide"><label for="divide">Divide</label><br><br> -->
+        <input type="submit" value="Submit">
+    </form>
+    <button onclick="validateInput(document.getElementById('input1').value)">Submit</button><br>
+    <p id="display"></p>
+    
+    <!-- <h2 class="example"></h2>
+    <p class="example"></p> -->
+
+    <!-- <ul>
+        <li class="item">HTML</li>
+        <li class="item">CSS</li>
+        <li class="item">JS</li>
+    </ul> -->
+
+    <!-- this refers to the button itself -->
+    <!-- <button onclick="this.style.display = 'none'">Hide</button>
+
+    <button onclick="getData()">Retrieve Data</button> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/week1/day5.js"></script>
+</body>
+
+</html>
