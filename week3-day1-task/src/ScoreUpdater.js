@@ -36,6 +36,7 @@ class ScoreUpdater extends React.Component {
 		if (nextState.input > this.state.score && nextState.update === true) {
 			nextState.score = nextState.input;
 			nextState.update = false;
+			return false;
 		} else {
 			nextState.update = false;
 		}
