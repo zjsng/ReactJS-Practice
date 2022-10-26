@@ -47,10 +47,6 @@ class ScoreUpdater extends React.Component {
 		return result;
 	}
 
-	componentDidUpdate = () => {
-		console.log("Component Updated");
-	}	
-
 	render() {
 		return (
 			<div>
