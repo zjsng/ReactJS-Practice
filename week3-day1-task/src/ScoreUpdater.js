@@ -14,36 +14,42 @@ class ScoreUpdater extends React.Component {
 
 	changeHandler = (event) => {
 		this.setState({
-			...this.state, input: parseInt(event.target.value, 10)
+			...this.state,
+			input: parseInt(event.target.value, 10),
+			update: false
 		});
 	}
 
 	submitBtnHandler = (event) => {
 		event.preventDefault();
-		this.setState({
-			...this.state,
-			update: true,
-			open: true
-		});
+		if (this.state.input > this.state.score) {
+			this.setState({
+				...this.state,
+				score: this.state.input,
+				update: true,
+				open: true
+			});
+		}
 	}
 
 	handleClose = () => {
-		this.setState({ ...this.state, open: false });
+		console.log("Closing modal...");
+		this.setState({ ...this.state, update: false, open: false });
 	}
 
 	shouldComponentUpdate = (nextProps, nextState) => {
 		console.log(nextState, this.state);
 		let result = true;
-		if (nextState.input > this.state.score && nextState.update === true) {
-			nextState.score = nextState.input;
-			nextState.update = false;
+		if (nextState.input < this.state.score && nextState.update === true) {
 			result = false;
-		} else {
-			nextState.update = false;
 		}
-
+		console.log("Should component update? " + result);
 		return result;
 	}
+
+	componentDidUpdate = () => {
+		console.log("Component Updated");
+	}	
 
 	render() {
 		return (

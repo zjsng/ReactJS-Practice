@@ -6,6 +6,9 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-import App from './App';
+import Question1 from "./Question1";
+import Question2 from "./Question2";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+    <Question2 />
+    , document.getElementById("root"));
