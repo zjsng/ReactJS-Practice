@@ -4,12 +4,8 @@ import { atomData } from './recoil/atomData';
 
 import { Form } from './stories/Form';
 
-let id = 0;
-const getId = () => {
-  return id++;
-}
-
 const AddToList = () => {
+  const [id, setId] = useState(0);
   const [userInputVal, setUserInputVal] = useState("");
   const [atom, setAtomData] = useRecoilState(atomData);
   //console.log(atom);
@@ -19,15 +15,17 @@ const AddToList = () => {
     setUserInputVal(event.target.value);
   }
 
-  const addToAtomHandler = () => {
+  const addToAtom = () => {
     if (userInputVal) {
-      setAtomData(list => [...list, { id: getId(), text: userInputVal }]);
+      let tempId = id;
+      setAtomData(list => [...list, { id: id, text: userInputVal }]);
+      setId(tempId + 1);
     }
   }
 
   return (
     <div>
-      <Form onChange={onChangeHandler} onClick={addToAtomHandler} />
+      <Form onChange={onChangeHandler} onClick={addToAtom} />
     </div>
   )
 }
