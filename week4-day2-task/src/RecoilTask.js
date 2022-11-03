@@ -56,11 +56,3 @@ const RecoilTask = () => {
 }
 
 export default RecoilTask;
-
-// {list.length > 0 ? (list.map(info => {
-//   return (
-//     <React.Fragment key={info.id}>
-//       {info.text}
-//     </React.Fragment>
-//   )
-// })) : (<></>)}
