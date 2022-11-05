@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { updateArrayOfObject } from './Actions';
 
 export class SampleUIComponent extends Component {
+
+
   updateBtnHandler = () => {
     const newPerson = { gender: "male", firstName: "Luke", lastName: "McCoy", email: "luke.mccoy@example.com" }
     this.props.updateArray(newPerson);
@@ -21,7 +23,8 @@ export class SampleUIComponent extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    arrayOfObjects: state.arrOfObj
+    arrayOfObjects: state.arrOfObj,
+    darkTheme: state.useDarkTheme
   }
 }
 

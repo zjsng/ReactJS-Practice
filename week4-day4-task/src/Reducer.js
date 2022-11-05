@@ -8,7 +8,8 @@ const initState = {
     { gender: "female", firstName: "Lucy", lastName: "Wright", email: "lucy.wright@example.com" },
     { gender: "male", firstName: "Pijke", lastName: "Hoogerwerf", email: "pijke.hoogerwerf@example.com" },
     { gender: "male", firstName: "Viljami", lastName: "Pulkkinen", email: "viljami.pulkkinen@example.com" }
-  ]
+  ],
+  useDarkTheme: true
 }
 
 const Reducer = (state = initState, action) => {

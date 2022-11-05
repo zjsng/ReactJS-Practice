@@ -1,8 +1,8 @@
-import * as actions from "./ActionType";
+import * as ActionType from "./ActionType";
 
 export const updateArrayOfObject = val => {
   return {
-    type: actions.UPD,
+    type: ActionType.UPD,
     payload: val
   }
 }
